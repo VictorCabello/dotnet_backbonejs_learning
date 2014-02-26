@@ -11,8 +11,17 @@
             'show/:id': 'show',
             'download/*random': 'download',
             'search/:query': 'search',
+            'user' : 'user',
             '*default': 'default'
         },
+
+        user: function () {
+
+
+            var listView = new App.Views.User();
+
+        },
+
         index: function () {
             $(document.body).append("Index route has been called.. ..");
         },

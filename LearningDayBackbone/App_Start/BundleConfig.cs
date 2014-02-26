@@ -19,6 +19,7 @@ namespace LearningDayBackbone
                 .Include("~/Scripts/underscore.js")
                 .Include("~/Scripts/Backbone.js")
                 .Include("~/Scripts/app/application.js")
+                .Include("~/Scripts/app/view/user.js")
                 );
 
         }
