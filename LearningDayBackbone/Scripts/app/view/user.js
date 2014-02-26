@@ -9,9 +9,9 @@
             _.bindAll(this, 'render', 'addItem', 'appendItem'); // remember: every function that uses 'this' as the current object should be in here
 
             this.collection = new App.Collections.User();
-            this.collection.bind('add', this.appendItem); // collection event binder
-
+            this.collection.fetch();
             this.render();
+            this.collection.bind('add', this.appendItem); // collection event binder
         },
 
         render: function () {
@@ -26,6 +26,7 @@
 
         addItem: function () {
             var myUserModel = new App.Models.User();
+
             this.collection.add(myUserModel); // add item to collection; view is updated via event 'add'
         },
 
