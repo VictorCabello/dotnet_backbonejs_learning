@@ -17,7 +17,9 @@ namespace LearningDayBackbone
 
             bundles.Add(new ScriptBundle("~/bundles/backbone")
                 .Include("~/Scripts/underscore.js")
-                .Include("~/Scripts/Backbone.js"));
+                .Include("~/Scripts/Backbone.js")
+                .Include("~/Scripts/app/application.js")
+                );
 
         }
     }
