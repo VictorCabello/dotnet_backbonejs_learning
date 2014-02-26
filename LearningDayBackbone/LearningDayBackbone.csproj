@@ -121,10 +121,14 @@
     <Reference Include="WebGrease">
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
     </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Models\CreateSession.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SessionsController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -138,6 +142,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\app\application.js" />
+    <Content Include="Scripts\app\Model\ErrorHandlingModel.js" />
     <Content Include="Scripts\app\view\user.js" />
     <Content Include="Scripts\backbone.js" />
     <Content Include="Scripts\backbone.min.js" />

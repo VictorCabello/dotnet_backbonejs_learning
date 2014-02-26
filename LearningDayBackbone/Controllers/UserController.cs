@@ -19,11 +19,13 @@ namespace LearningDayBackbone.Controllers
             new UserModel {  name = "Hammer"} 
         };
 
+
         public IEnumerable<UserModel> GetAllProducts()
         {
             return users;
         }
 
+        [Authorize]
         public UserModel Post(UserModel aModel)
         {
             users[0] = aModel;
