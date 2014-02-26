@@ -1,25 +1,36 @@
 ﻿
 (function () {
     window.App.Views['User'] = Backbone.View.extend({
-        el: $('body'), // attaches `this.el` to an existing element.
+        el: $('.container'), // attaches `this.el` to an existing element.
         events: {
             'click button#add': 'addItem'
         },
         initialize: function () {
-            _.bindAll(this, 'render', 'addItem'); // every function that uses 'this' as the current object should be in here
+            _.bindAll(this, 'render', 'addItem', 'appendItem'); // remember: every function that uses 'this' as the current object should be in here
 
-            this.counter = 0; // total number of items added thus far
+            this.collection = new App.Collections.User();
+            this.collection.bind('add', this.appendItem); // collection event binder
+
             this.render();
         },
 
         render: function () {
-            $(this.el).append("<button id='add'>Add user</button>");
+            var self = this;
+            $(this.el).html('');
+            $(this.el).append("<button id='add'>Add User</button>");
             $(this.el).append("<ul></ul>");
+            _(this.collection.models).each(function (user) { // in case collection is not empty
+                self.appendItem(user);
+            }, this);
         },
 
         addItem: function () {
-            this.counter++;
-            $('ul', this.el).append("<li>Adding user " + this.counter + "</li>");
+            var myUserModel = new App.Models.User();
+            this.collection.add(myUserModel); // add item to collection; view is updated via event 'add'
+        },
+
+        appendItem: function (user) {
+            $('ul', this.el).append("<li>" + user.get('name') + "</li>");
         }
         
 

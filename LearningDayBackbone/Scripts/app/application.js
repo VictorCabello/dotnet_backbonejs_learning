@@ -18,7 +18,7 @@
         user: function () {
 
 
-            var listView = new App.Views.User();
+            App['viewUser'] = new App.Views.User();
 
         },
 
@@ -46,6 +46,8 @@
 
     });
 
-    new App.Router;
-    Backbone.history.start();
+    $(document).ready(function () {
+        new App.Router;
+        Backbone.history.start();
+    });
 })();
