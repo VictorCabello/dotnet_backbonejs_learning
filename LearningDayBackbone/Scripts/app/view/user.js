@@ -26,7 +26,7 @@
 
         addItem: function () {
             var myUserModel = new App.Models.User();
-
+            myUserModel.save({ success: function () { alert("hola") } });
             this.collection.add(myUserModel); // add item to collection; view is updated via event 'add'
         },
 
