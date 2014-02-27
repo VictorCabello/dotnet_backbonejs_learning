@@ -8,11 +8,18 @@
     App.Router = Backbone.Router.extend({
         routes: {
             '': 'index',
+            'login': 'login',
             'show/:id': 'show',
             'download/*random': 'download',
             'search/:query': 'search',
             'user' : 'user',
             '*default': 'default'
+        },
+        login: function () {
+
+
+            App['login'] = new App.Views.Login();
+
         },
         user: function () {
 

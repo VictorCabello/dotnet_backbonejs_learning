@@ -10,15 +10,12 @@ namespace LearningDayBackbone.Controllers
 {
     public class UserController : ApiController
     {
-
-
         UserModel[] users = new UserModel[] 
         { 
             new UserModel {  name = "Tomato Soup"}, 
             new UserModel {  name = "Yo-yo"}, 
             new UserModel {  name = "Hammer"} 
         };
-
 
         public IEnumerable<UserModel> GetAllProducts()
         {

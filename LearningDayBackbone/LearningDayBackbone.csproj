@@ -142,7 +142,9 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\app\application.js" />
+    <Content Include="Scripts\app\Model\Session.js" />
     <Content Include="Scripts\app\Model\ErrorHandlingModel.js" />
+    <Content Include="Scripts\app\view\Login.js" />
     <Content Include="Scripts\app\view\user.js" />
     <Content Include="Scripts\backbone.js" />
     <Content Include="Scripts\backbone.min.js" />
