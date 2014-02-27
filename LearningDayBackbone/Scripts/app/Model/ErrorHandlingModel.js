@@ -8,6 +8,7 @@
         },
 
         defaultErrorHandler: function (model, error) {
+            console.log(error);
             this.redirectToDefault();
         },
         hasClientUrl: function () {
@@ -21,7 +22,7 @@
             return true;
         },
         redirectToDefault:function () {
-            App.router.navigate('', {
+            App.router.navigate('login', {
                 trigger: true
         });
     }

@@ -21,7 +21,9 @@ namespace LearningDayBackbone
                 .Include("~/Scripts/app/application.js")
                 .Include("~/Scripts/app/Model/ErrorHandlingModel.js")
                 .Include("~/Scripts/app/Model/User.js")
+                .Include("~/Scripts/app/Model/Session.js")
                 .Include("~/Scripts/app/Collection/User.js")
+                .Include("~/Scripts/app/view/login.js")
                 .Include("~/Scripts/app/view/user.js")
                 );
 
