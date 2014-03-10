@@ -65,7 +65,7 @@ namespace LearningDayBackbone.Infrastructure
                 }
 
                 WebSecurity.InitializeDatabaseConnection("DefaultConnection", "Users", "Id", "Email", true);
-                WebSecurity.CreateUserAndAccount("victor", "pass", null, false);
+                //WebSecurity.CreateUserAndAccount("victor", "pass", null, false);
                 //WebSecurity.CreateAccount("victor", "pass", false);
             }
             catch (Exception e)

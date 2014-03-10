@@ -1,0 +1,22 @@
+﻿<script type="text/template" id="user-list-template">
+<button id='add'>Add User</button>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% _.each(users, function(user) { %><tr>
+      <td><%= user.get('error_name') %></td>
+        <td>delete</td>
+      </tr>
+      <tr>
+        <td><%= user.get('name') %></td>
+        <td>delete</td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>
+</script>

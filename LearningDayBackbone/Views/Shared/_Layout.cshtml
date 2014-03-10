@@ -8,6 +8,7 @@
   <h1>Template</h1>
   @RenderBody()
 
-@Scripts.Render("~/bundles/jquery", "~/bundles/backbone")
+  @Html.Partial("~/Views/Shared/_Templates.cshtml")
+  @Scripts.Render("~/bundles/jquery", "~/bundles/backbone")
 </body>
 </html>

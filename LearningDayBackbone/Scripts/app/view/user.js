@@ -15,13 +15,9 @@
         },
 
         render: function () {
-            var self = this;
-            $(this.el).html('');
-            $(this.el).append("<button id='add'>Add User</button>");
-            $(this.el).append("<ul></ul>");
-            _(this.collection.models).each(function (user) { // in case collection is not empty
-                self.appendItem(user);
-            }, this);
+
+            var template = _.template($('#user-list-template').html(), { users: this.collection.models });
+            $(this.el).html(template);
         },
 
         addItem: function () {
@@ -31,7 +27,7 @@
         },
 
         appendItem: function (user) {
-            $('ul', this.el).append("<li>" + user.get('name') + "</li>");
+            $('tbody', this.el).append("<tr> <td>" + user.get('name') + "</td> <td> delete</td> </tr>");
         }
         
 

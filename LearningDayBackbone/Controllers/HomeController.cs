@@ -15,6 +15,5 @@ namespace LearningDayBackbone.Controllers
         {
             return View();
         }
-
     }
 }
