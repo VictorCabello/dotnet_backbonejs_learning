@@ -25,6 +25,7 @@ namespace LearningDayBackbone
                 .Include("~/Scripts/app/Collection/User.js")
                 .Include("~/Scripts/app/view/login.js")
                 .Include("~/Scripts/app/view/user.js")
+                .Include("~/Scripts/i18next-1.7.1.min.js")
                 );
 
         }

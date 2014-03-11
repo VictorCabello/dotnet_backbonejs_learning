@@ -1,0 +1,12 @@
+﻿{
+  "data": {
+    "name": "Nombre",
+    "actions": "Acciones",
+	"delete": "Delete"
+  },
+  "name": "Name",
+  "actions": "Actions",
+  "button": {
+	"add": "Adding"
+  }
+}

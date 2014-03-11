@@ -53,7 +53,11 @@
     });
 
     $(document).ready(function () {
-        App.router = new App.Router;
-        Backbone.history.start();
+        language = "es";
+        $.i18n.init({ lng: language, debug: true, preload: ['en', 'es'] },
+            function (t) {
+                App.router = new App.Router;
+                Backbone.history.start();
+            });
     });
 })();
